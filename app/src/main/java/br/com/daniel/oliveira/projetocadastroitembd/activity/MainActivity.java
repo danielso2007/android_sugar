@@ -6,35 +6,33 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+
 public class MainActivity extends AppCompatActivity {
 
-    private Button novo;
-    private Button listar;
+    @BindView(R.id.btNovo)
+    Button novo;
+
+    @BindView(R.id.btListar)
+    Button listar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        this.novo = (Button) findViewById(R.id.btNovo);
-        this.listar = (Button) findViewById(R.id.btListar);
-
-        this.novo.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                iniciarActivity(NovoItemActivity.class);
-            }
-        });
-
-        this.listar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                iniciarActivity(ListarItensActivity.class);
-            }
-        });
+        ButterKnife.bind(this);
     }
 
-    private void iniciarActivity(Class activity) {
-        startActivity(new Intent(this, activity));
+    @OnClick(R.id.btNovo)
+    public void onCLickNovo(View v) {
+        startActivity(new Intent(this, NovoItemActivity.class));
+    }
+
+    @OnClick(R.id.btListar)
+    public void onClickListar(View v) {
+        startActivity(new Intent(this, ListarItensActivity.class));
     }
 }
