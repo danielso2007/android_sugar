@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">ProjetoCadastroItemBD</string>
+    <string name="bt_novo">Novo Item</string>
+    <string name="bt_apresentar_todos">Listar Itens</string>
+    <string name="title_activity_novo_item">NovoItemActivity</string>
 </resources>
