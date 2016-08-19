@@ -2,4 +2,16 @@
     <string name="app_name">Projeto Cadastro Item</string>
     <string name="bt_novo">Novo Item</string>
     <string name="bt_apresentar_todos">Listar Itens</string>
+    <string name="lbl_nome">Nome do item</string>
+    <string name="lbl_qtd">Quantidade</string>
+    <string name="lbl_categoria">Categoria</string>
+    <string name="bt_salvar">Salvar</string>
+
+    <string-array name="categorias_array">
+        <item>Livros</item>
+        <item>Games</item>
+        <item>Celulares</item>
+        <item>Móveis</item>
+        <item>TV e Áudio</item>
+    </string-array>
 </resources>
